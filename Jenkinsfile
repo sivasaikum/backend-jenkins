@@ -1,8 +1,8 @@
 pipeline {
     agent { label 'STAGE-1'}
     environment {
-        PROJECT = 'EXPENSE'
-        COMPONENT = 'BACKEND'
+        PROJECT = 'expense'
+        COMPONENT = 'backend'
         appVersion = ''
         ACC_ID = '344060441143'
     }
