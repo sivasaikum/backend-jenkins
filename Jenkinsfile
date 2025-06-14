@@ -46,5 +46,17 @@ pipeline {
                 }
             }
         }
+
+        stage('Trigger Deploy') {
+            when {
+                expression {
+                    params.deploy
+                }
+            }
+            steps {
+                build job: 'backend-ci', parameters: [string(name:'version', value: "${appVersion}")], propagate: true
+
+            }
+        }
     }
 }
