@@ -4,8 +4,11 @@ pipeline {
         PROJECT = 'expense'
         COMPONENT = 'backend'
         appVersion = ''
-        ACC_ID = '344060441143'
+        ACC_ID = '381491879282'
     }
+    parameters {
+        booleanParam(name: 'deploy', defaultValue: false, description: 'select when you are ready to deploy')
+    }    
 
     stages {
         stage('Read Json Version') {
