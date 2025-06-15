@@ -3,3 +3,5 @@
 def configMap = [
     greet : "Hello my name is Sivasai"
 ]
+
+samplepipeline(configMap)
