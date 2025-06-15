@@ -5,4 +5,4 @@ def configMap = [
     component : "backend"
 ]
 
-samplepipeline(configMap)
+nodeJSEKSPipeline(configMap)
