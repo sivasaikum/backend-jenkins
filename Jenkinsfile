@@ -5,4 +5,11 @@ def configMap = [
     component : "backend"
 ]
 
-nodeJSEKSPipeline(configMap)
+
+
+if ( ! env.BRANCH_NAME.equalsIgnoreCase('main')) {
+    nodeJSEKSPipeline(configMap)
+}
+else {
+    echo " please follow production process"
+}
